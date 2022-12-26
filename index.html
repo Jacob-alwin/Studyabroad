@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/index.scss" rel="stylesheet/scss" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="less.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="index.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Conact US</title>
+    <style>
+      body {
+        background: #fff;
+        width: 100vw;
+        font-family: "Poppins", sans-serif;
+
+        background-image: url(/assets/campus.png);
+        background-repeat: no-repeat, repeat;
+        background-size: cover; /* Resize the background image to cover the entire container */
+
+        margin: 0;
+        overflow-x: hidden;
+      }
+      header {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 10vw;
+        margin: 0;
+      }
+      .logo {
+        width: 5vw;
+        height: max-content;
+      }
+      .logobtn {
+        width: 10vw;
+        padding: 1vw;
+        transition: all ease 0.5s;
+        border-radius: 0.5vw;
+        font-size: 1.3vw;
+        border: none;
+        color: white;
+        font-weight: 600;
+        height: max-content;
+        background: linear-gradient(180deg, #e8c15c 0%, #c68215 100%);
+      }
+      h2 {
+        margin: 0;
+        width: 50vw;
+        font-size: 3vw;
+      }
+      span {
+        color: red;
+      }
+      h5 {
+        margin: 0;
+        font-size: 1.5vw;
+      }
+      section {
+        margin: 0;
+        width: 100vw;
+        min-height: 85vh;
+        position: relative;
+        backdrop-filter: blur(7px);
+        background-color: rgba(255, 255, 255, 0.76);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wave {
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+      }
+      footer {
+        background: rgb(255, 255, 255);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 1vw;
+        font-size: 1vw;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+        z-index: 11;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        margin: 0.5vw 0;
+        z-index: 11;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+      .tick {
+        z-index: 11;
+        width: 1vw;
+        height: max-content;
+        margin-right: 1vw;
+      }
+      p {
+        z-index: 11;
+
+        font-size: 1vw;
+        margin: 0;
+      }
+      .flags {
+        width: 40vw;
+        height: max-content;
+      }
+
+      /* form */
+
+      form {
+        background: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+        height: 40vw;
+        border-radius: 1vw;
+        padding: 1vw;
+        z-index: 10;
+      }
+      h3 {
+        color: orange;
+        font-size: 3vw;
+        width: 25vw;
+        margin: 1vw 0;
+      }
+      .inputholder {
+        position: relative;
+        width: 25vw;
+        height: 3vw;
+        margin: 0.5vw 0;
+        display: flex;
+        align-items: center;
+      }
+      .inputicons {
+        top: 0.6vw;
+        right: 0.5vw;
+        height: 2vw;
+
+        position: absolute;
+      }
+      input {
+        outline: none;
+        border: none;
+        border-radius: 0.5vw;
+        font-size: 1.4vw;
+        padding-left: 1vw;
+        width: 25vw;
+        color: gray;
+        text-align: start;
+        height: 3vw;
+      }
+      input::placeholder {
+        margin: 0;
+        padding: 0;
+      }
+      .prefer {
+        outline: none;
+        border: none;
+        border-radius: 0.5vw;
+        font-size: 1.4vw;
+        width: 26vw;
+        text-align: left;
+        height: 3vw;
+      }
+      .check {
+        outline: none;
+        border: none;
+        border-radius: 0vw;
+        font-size: 1.4vw;
+        padding-left: 1vw;
+        width: 1vw;
+        text-align: left;
+        height: 3vw;
+      }
+      .agree {
+        margin: 0;
+        margin-left: 0.5vw;
+        font-size: 0.8vw;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+      .formbutton {
+        width: 25vw;
+        padding: 1vw;
+        border-radius: 0.5vw;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.3vw;
+        height: max-content;
+        transition: all ease 0.5s;
+
+        background: linear-gradient(180deg, #e8c15c 0%, #c68215 100%);
+      }
+
+      button:hover {
+        transition: all ease 0.5s;
+        background: #fff;
+        color: #e8c15c;
+      }
+
+      /* form */
+
+      @media only screen and (max-width: 600px) {
+        header {
+          background: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2vw 10vw;
+          margin: 0;
+        }
+        .logo {
+          width: 10vw;
+          height: max-content;
+        }
+        .logobtn {
+          width: 20vw;
+          padding: 1.5vw;
+          transition: all ease 0.5s;
+          border-radius: 1vw;
+          font-size: 3.3vw;
+          border: none;
+          color: white;
+          font-weight: 600;
+          height: max-content;
+          background: linear-gradient(180deg, #e8c15c 0%, #c68215 100%);
+        }
+        h2 {
+          margin: 0;
+          width: 90vw;
+          font-size: 6vw;
+        }
+        span {
+          color: red;
+        }
+        h5 {
+          margin: 0;
+          font-size: 2.5vw;
+        }
+        section {
+          margin: 0;
+          width: 100vw;
+          min-height: 80vh;
+          padding: 10vw 0;
+          position: relative;
+          backdrop-filter: blur(7px);
+          background-color: rgba(255, 255, 255, 0.76);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        footer {
+          background: rgb(255, 255, 255);
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          padding: 1vw;
+          font-size: 2vw;
+          margin: 0;
+        }
+        ul {
+          list-style: none;
+          z-index: 11;
+          margin: 0;
+          padding: 0;
+        }
+        li {
+          margin: 1vw 0;
+          z-index: 11;
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+        .tick {
+          z-index: 11;
+          width: 2.5vw;
+          height: max-content;
+          margin-right: 1vw;
+        }
+        p {
+          z-index: 11;
+
+          font-size: 2.5vw;
+          margin: 0;
+        }
+        .flags {
+          width: 80vw;
+          height: max-content;
+        }
+
+        /* form */
+
+        form {
+          background: #f2f2f2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 2vw 0;
+          width: 80vw;
+          height: 80vw;
+          border-radius: 1vw;
+          padding: 1vw;
+          z-index: 10;
+        }
+        h3 {
+          color: orange;
+          font-size: 5vw;
+          width: 70vw;
+          margin: 1vw 0;
+        }
+        .inputholder {
+          position: relative;
+          width: 70vw;
+          height: 7vw;
+          margin: 1vw 0;
+          display: flex;
+          align-items: center;
+        }
+        .inputicons {
+          top: 1vw;
+          right: 1.5vw;
+          height: 4vw;
+
+          position: absolute;
+        }
+        input {
+          outline: none;
+          border: none;
+          border-radius: 1.5vw;
+          font-size: 3.4vw;
+          padding-left: 1vw;
+          width: 70vw;
+          color: gray;
+          text-align: start;
+          height: 7vw;
+        }
+        input::placeholder {
+          margin: 0;
+          padding: 0;
+        }
+        .prefer {
+          outline: none;
+          border: none;
+          border-radius: 0.5vw;
+          font-size: 3.4vw;
+          width: 76vw;
+          text-align: left;
+          height: 7vw;
+        }
+        .check {
+          outline: none;
+          border: none;
+          border-radius: 0vw;
+          font-size: 1.4vw;
+          padding-left: 1vw;
+          width: 3vw;
+          text-align: left;
+          height: 3vw;
+        }
+        .agree {
+          margin: 0;
+          margin-left: 0.5vw;
+          font-size: 2vw;
+        }
+        a {
+          text-decoration: none;
+          color: blue;
+        }
+        .formbutton {
+          width: 70vw;
+          padding: 1vw;
+          margin: 1vw;
+          border-radius: 1vw;
+          border: none;
+          color: #fff;
+          font-weight: 700;
+          font-size: 3vw;
+          height: max-content;
+          transition: all ease 0.5s;
+
+          background: linear-gradient(180deg, #e8c15c 0%, #c68215 100%);
+        }
+
+        button:hover {
+          transition: all ease 0.5s;
+          background: #fff;
+          color: #e8c15c;
+        }
+
+        /* form */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/assets/logo.svg" alt="" />
+      <button class="logobtn">Call Us</button>
+    </header>
+    <section>
+      <div>
+        <h2>
+          Make your "DREAM CAREER" come to life with<span> SD Abroad</span>
+        </h2>
+        <h5>Graduate from Top International Universities</h5>
+        <img class="flags" src="/assets/flags.svg" alt="" />
+        <ul>
+          <li>
+            <img class="tick" src="/assets/tick.svg" alt="" />
+            <p>University Application Process</p>
+          </li>
+          <li>
+            <img class="tick" src="/assets/tick.svg" alt="" />
+            <p>Test Preps</p>
+          </li>
+          <li>
+            <img class="tick" src="/assets/tick.svg" alt="" />
+            <p>Scholarships</p>
+          </li>
+          <li>
+            <img class="tick" src="/assets/tick.svg" alt="" />
+            <p>Language Courses</p>
+          </li>
+          <li>
+            <img class="tick" src="/assets/tick.svg" alt="" />
+            <p>Education Loans & More!</p>
+          </li>
+        </ul>
+      </div>
+      <form>
+        <h3>Welcome</h3>
+        <div class="inputholder">
+          <input
+            type="text"
+            name="name"
+            placeholder="
+          Enter your full name"
+            value="Enter your full name"
+          />
+          <img class="inputicons" src="/assets/icons/person.svg" alt="" />
+        </div>
+        <div class="inputholder">
+          <input
+            type="email"
+            name="email"
+            placeholder="
+          Email Address"
+            value="Email Address"
+          />
+          <img class="inputicons" src="/assets/icons/@.svg" alt="" />
+        </div>
+        <div class="inputholder">
+          <select
+            title="Select preferred study Destination "
+            value="prefer"
+            name="prefer"
+            class="prefer"
+          >
+            <option value="1">+91</option>
+            <option value="1">+91</option>
+            <option value="1">+91</option>
+            <option value="1">+91</option>
+          </select>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="
+          Phone Number"
+            value="Phone Number"
+          />
+          <img class="inputicons" src="/assets/icons/phone.svg" alt="" />
+        </div>
+        <div class="inputholder">
+          <input
+            type="text"
+            name="city"
+            placeholder="
+          City"
+            value="City"
+          />
+          <img class="inputicons" src="/assets/icons/location.svg" alt="" />
+        </div>
+        <div class="inputholder">
+          <select
+            title="Select preferred study Destination "
+            value="prefer"
+            name="prefer"
+            class="prefer"
+          >
+            <option value="1">Canada</option>
+            <option value="1">Canada</option>
+            <option value="1">Uk</option>
+            <option value="1">Aus</option>
+          </select>
+        </div>
+        <div class="inputholder">
+          <input
+            class="check"
+            type="checkbox"
+            name="check"
+            placeholder="
+            City"
+            value="false"
+          />
+          <p class="agree">
+            I have read and agreed to
+            <a href="">terms & Conditions</a>
+          </p>
+        </div>
+
+        <button class="formbutton" type="submit">
+          Book Your Free Consultation
+        </button>
+      </form>
+      <img class="wave" src="/assets/wave.svg" alt="" />
+    </section>
+    <footer>© 2022, SD Campus. All Rights Reserved. | Privacy Policy</footer>
+  </body>
+</html>
